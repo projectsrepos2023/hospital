@@ -9,12 +9,12 @@
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 <title>:: Oreo Hospital :: Home</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
-<link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/css/bootstrap.min.css') ?>">
-<link rel="stylesheet" href="<?php echo base_url('assetsassets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') ?>"/>
-<link rel="stylesheet" href="<?php echo base_url('assetsassets/plugins/morrisjs/morris.min.css') ?>" />
+<link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/bootstrap/css/bootstrap.min.css') ?>">
+<link rel="stylesheet" href="<?php echo base_url('public/assetsassets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') ?>"/>
+<link rel="stylesheet" href="<?php echo base_url('public/assetsassets/plugins/morrisjs/morris.min.css') ?>" />
 <!-- Custom Css -->
-<link rel="stylesheet" href="<?php echo base_url('css/main.css') ?>">
-<link rel="stylesheet" href="<?php echo base_url('css/color_skins.css') ?>">
+<link rel="stylesheet" href="<?php echo base_url('public/css/main.css') ?>">
+<link rel="stylesheet" href="<?php echo base_url('public/css/color_skins.css') ?>">
 </head>
 <body class="theme-cyan">
 <!-- Page Loader -->
