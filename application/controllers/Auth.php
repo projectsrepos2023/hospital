@@ -2,9 +2,13 @@
 
 class Auth extends CI_Controller
 {
-    function index() {
+    public function index() {
         $this->load->view('login', ["loginError" => null]); 
     }
+
+    public function page_not_found() {
+        $this->load->view('404');     
+}
 
     public function dashboard() {
         //only staff member can access the dashbord route otherwise redirect to login
