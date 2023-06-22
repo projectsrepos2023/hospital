@@ -1,8 +1,8 @@
 <!-- Left Sidebar -->
 <aside id="leftsidebar" class="sidebar">
     <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home m-r-5"></i>Oreo</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user">Doctor</a></li>
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home m-r-5"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user">Reports</i></a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane stretchRight active" id="dashboard">
@@ -10,22 +10,39 @@
                 <ul class="list">
                     <li>
                         <div class="user-info">
-                            <div class="image"><a href="profile.html"><img src="../assets/images/profile_av.jpg" alt="User"></a></div>
+                            <div class="image"><a href="profile.html"><img src="" alt="User"></a></div>
                             <div class="detail">
                                 <h4>Dr. Charlotte</h4>
                                 <small>Neurologist</small>                        
                             </div>
                         </div>
                     </li>
-                    <li class="header">MAIN</li>
-                    <li class="active open"><a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>            
-                    <li><a href="book-appointment.html"><i class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a></li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-add"></i><span>Doctors</span> </a>
+                   
+                    <li class="active open"><a href="<?php echo base_url('Dashboard') ?>"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>   
+                    <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-settings"></i><span>Settings</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="doctors.html">All Doctors</a></li>
-                            <li><a href="add-doctor.html">Add Doctor</a></li>                       
-                            <li><a href="profile.html">Doctor Profile</a></li>
-                            <li><a href="events.html">Doctor Schedule</a></li>
+                            <li><a href="<?php echo base_url('departments') ?>">Register Departments</a></li>
+                            <li><a href="<?php echo base_url('position') ?>">Register Position</a></li>                       
+                            
+                        </ul>
+                    </li>         
+                    <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-settings"></i><span>Billing Settings</span> </a>
+                        <ul class="ml-menu"> 
+                        
+                            <li><a href="<?php echo base_url('lab_test') ?>">Register Lab Tests</a></li>
+                            <li><a href="<?php echo base_url('procedures') ?>">Register Procedure Price</a></li>                       
+                            <li><a href=" <?php echo base_url('surgical') ?>">Register Surgical Price</a></li>                       
+                                                
+                            
+                        </ul>
+                    </li>         
+                    <!-- <li><a href="book-appointment.html"><i class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a></li> -->
+                    <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-add"></i><span>Staff</span> </a>
+                        <ul class="ml-menu">
+                            <li><a href="doctors.html">All Staff</a></li>
+                            <li><a href="add-doctor.html">Add staff</a></li>                       
+                            <li><a href="profile.html">Staff Profile</a></li>
+                            <!-- <li><a href="events.html">Doctor Schedule</a></li> -->
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
@@ -158,28 +175,21 @@
                         <div class="user-info m-b-20 p-b-15">
                             <div class="image"><a href="profile.html"><img src="../assets/images/profile_av.jpg" alt="User"></a></div>
                             <div class="detail">
-                                <h4>Dr. Charlotte</h4>
+                                <h4>james</h4>
                                 <small>Neurologist</small>                        
                             </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                    <a title="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                    <a title="instagram" href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                </div>
-                                <div class="col-4 p-r-0">
-                                    <h5 class="m-b-5">18</h5>
-                                    <small>Exp</small>
-                                </div>
-                                <div class="col-4">
-                                    <h5 class="m-b-5">125</h5>
-                                    <small>Awards</small>
-                                </div>
-                                <div class="col-4 p-l-0">
-                                    <h5 class="m-b-5">148</h5>
-                                    <small>Clients</small>
-                                </div>                                
-                            </div>
+                            <li><a href="" ><i class="zmdi zmdi-file-text"></i></i><span>New Patients Report</span> </a>
+                            <li><a href="" ><i class="zmdi zmdi-file-text"></i></i><span>New Patients Report</span> </a>
+                            <li><a href="" ><i class="zmdi zmdi-file-text"></i></i><span>New Patients Report</span> </a>
+                            <li><a href="" ><i class="zmdi zmdi-file-text"></i></i><span>New Patients Report</span> </a>
+                            <li><a href="" ><i class="zmdi zmdi-file-text"></i></i><span>New Patients Report</span> </a>
+                            <li><a href="" ><i class="zmdi zmdi-file-text"></i></i><span>New Patients Report</span> </a>
+                            <li><a href="" ><i class="zmdi zmdi-file-text"></i></i><span>New Patients Report</span> </a>
+                                                 
+                                                
+                            
+                       
+                    </li>    
                         </div>
                     </li>
                     <li>

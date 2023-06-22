@@ -13,3 +13,4 @@ $route['login'] = 'auth/login';
 
 $route['404_override'] = 'auth/page_not_found';
 $route['translate_uri_dashes'] = FALSE;
+$route['departments'] = 'Admin/departments';
