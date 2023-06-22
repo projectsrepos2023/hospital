@@ -56,3 +56,4 @@ $route['login'] = 'auth/login';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['departments'] = 'Admin/departments';
