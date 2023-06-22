@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /hospital/
+RewriteBase /hs/
 
 # Remove index.php from the URL
 RewriteCond %{REQUEST_FILENAME} !-f
