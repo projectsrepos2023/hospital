@@ -39,9 +39,10 @@
                     <!-- <li><a href="book-appointment.html"><i class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a></li> -->
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-add"></i><span>Staff</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="doctors.html">All Staff</a></li>
-                            <li><a href="add-doctor.html">Add staff</a></li>                       
-                            <li><a href="profile.html">Staff Profile</a></li>
+                            <li><a href="add_staff">Register staff</a></li>  
+                            <li><a href="<?php echo base_url('staff') ?>">All Staff</a></li>
+                                                 
+                          
                             <!-- <li><a href="events.html">Doctor Schedule</a></li> -->
                         </ul>
                     </li>
