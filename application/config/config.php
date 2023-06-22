@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-$config['base_url'] = 'http://localhost/hs/';
+$config['base_url'] = 'http://localhost/hospital/';
 
 
 $config['index_page'] = '';
