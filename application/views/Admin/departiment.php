@@ -51,23 +51,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            
-                                            <td><span class="list-name">01</span></td>
-                                            <td>Doctors</td>
+                                        <?php $tableId = 1 ?>
+                                        <?php foreach ($departiments as $departiment): ?>
+                                        <tr> 
+                                            <td><span class="list-name"><?php echo $tableId < 10 ? "0" . $tableId++ : $tableId++ ?></span></td>
+                                            <td><?= $departiment->name ?></td>
                                             <td>2</td>
                                             
                                             
                                             <td><span class="badge badge-success">Approved</span></td>
                                             <td>
                                                 
-                                            <a href="#" class="delete-link">Delete</a>
+                                            <a href="<?php echo site_url('departiment/'. $departiment->departiment_id) ?>" class="delete-link">Delete</a>
                                             <a href="#" class="view-link"><i class="zmdi zmdi-eye"></i></a>
                                             </td>
-                                        
                                         </tr>
-                                        
-                                        </tr>
+                                        <?php endforeach ?>
                                     </tbody>
                                 </table>                            
                             </div>
@@ -84,6 +83,8 @@
 </section>
 <div class="modal fade" id="addevent" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
+
+    <?php echo form_open('Departiment/set_department')?>
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="title" id="defaultModalLabel">Add Department</h4>
@@ -92,16 +93,18 @@
                 
                 <div class="form-group">
                     <div class="form-line">
-                        <input type="text" class="form-control" placeholder="Enter Department name">
+                        <input type="text" class="form-control" placeholder="Enter Department name" name="departiment">
+                        <p class="text-danger"><?= form_error('department') ?></p>
                     </div>
                 </div>
                       
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-round waves-effect">Add</button>
+                <button type="submit" class="btn btn-primary btn-round waves-effect">Add</button>
                 <button type="button" class="btn btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
             </div>
         </div>
+        <?php echo form_close()?>
     </div>
 
 <?php include APPPATH . "views/includes/footer.php"?>
