@@ -50,22 +50,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $rowId = 1 ?>
+                                        <?php foreach($surgicals as $surgical): ?>
                                         <tr>
-                                            
-                                            <td><span class="list-name">01</span></td>
-                                            <td>Kufunga bandeji</td>
-                                            <td>500</td>
+                                            <td><span class="list-name"><?php echo $rowId < 10 ? "0".$rowId++ : $rowId++ ?></span></td>
+                                            <td><?= $surgical->name ?></td>
+                                            <td><?= $surgical->price ?></td>
                                             <td>
-                                            <a href="#" class="delete-link">Delete</a>
+                                            <a href="<?php echo site_url('surgical/'.$surgical->surgical_id)?>" class="delete-link">Delete</a>
                                             <a href="#" class="view-link"><i class="zmdi zmdi-eye"></i></a>
-
-                                            </td>
-                                            
-                                           
-                                        
                                         </tr>
-                                        
-                                        </tr>
+                                        <?php endforeach ?>
                                     </tbody>
                                 </table>                            
                             </div>
@@ -86,24 +81,28 @@
             <div class="modal-header">
                 <h4 class="title" id="defaultModalLabel">Register surgical</h4>
             </div>
+            <?php echo form_open('Surgical/add'); ?>
             <div class="modal-body">
                 
                 <div class="form-group">
                     <div class="form-line">
-                        <input type="text" class="form-control" placeholder="Enter surgical name">
+                        <input type="text" class="form-control" placeholder="Enter surgical name" name="name">
+                        <p class="text text-danger"><?= form_error('name') ?></p>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-line">
-                        <input type="number" class="form-control" placeholder="Enter surgical Amount">
+                        <input type="number" class="form-control" placeholder="Enter surgical Amount" name="price">
+                        <p class="text text-danger"><?= form_error('price') ?></p>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-round waves-effect">Add</button>
+                <button type="submit" class="btn btn-primary btn-round waves-effect">Add</button>
                 <button type="button" class="btn btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
             </div>
         </div>
+        <?php echo form_close() ?>
     </div>
 
 <?php include APPPATH . "views/includes/footer.php"?>

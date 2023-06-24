@@ -21,7 +21,7 @@
                     <li class="active open"><a href="<?php echo base_url('Dashboard') ?>"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>   
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-settings"></i><span>Settings</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="<?php echo base_url('departments') ?>">Register Departments</a></li>
+                            <li><a href="<?php echo site_url('departiment') ?>">Register Departments</a></li>
                             <li><a href="<?php echo base_url('position') ?>">Register Position</a></li>                       
                             
                         </ul>
@@ -29,8 +29,8 @@
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-settings"></i><span>Billing Settings</span> </a>
                         <ul class="ml-menu"> 
                         
-                            <li><a href="<?php echo base_url('lab_test') ?>">Register Lab Tests</a></li>
-                            <li><a href="<?php echo base_url('procedures') ?>">Register Procedure Price</a></li>                       
+                            <li><a href="<?php echo base_url('labtest') ?>">Register Lab Tests</a></li>
+                            <li><a href="<?php echo base_url('procedure') ?>">Register Procedure Price</a></li>                       
                             <li><a href=" <?php echo base_url('surgical') ?>">Register Surgical Price</a></li>                       
                                                 
                             
