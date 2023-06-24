@@ -60,4 +60,6 @@ $route['departments'] = 'Admin/departments';
 $route['staff'] = 'Admin/staff';
 $route['staff_profile'] = 'Admin/staff_profile';
 $route['add_staff'] = 'Admin/Add_staff';
+$route['add_patient'] = 'Reception/add_patient';
+$route['all_patient'] = 'Admin/all_patients';
 

@@ -22,6 +22,10 @@ class Admin extends CI_Controller
     {
         $this->load->view('Admin/add_staff');
     }
+    public function all_patients()
+    {
+        $this->load->view('Admin/all_patients');
+    }
 }
 
 

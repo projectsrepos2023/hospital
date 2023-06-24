@@ -307,6 +307,8 @@ UNLOCK TABLES;
 -- Table structure for table `patient`
 --
 
+-- additional data Gender
+
 DROP TABLE IF EXISTS `patient`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -501,6 +503,8 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `staff`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
+
+-- CHANGES first_name,Last_name remove position 
 CREATE TABLE `staff` (
   `id` int NOT NULL,
   `full_name` varchar(45) DEFAULT NULL,

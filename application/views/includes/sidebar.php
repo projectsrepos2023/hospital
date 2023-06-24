@@ -48,8 +48,8 @@
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="patients.html">All Patients</a></li>
-                            <li><a href="add-patient.html">Add Patient</a></li>                       
+                            <li><a href="<?php echo base_url('all_patient') ?>">All Patients</a></li>
+                            <li><a href="<?php echo base_url('add_patient') ?>">Add Patient</a></li>                       
                             <li><a href="patient-profile.html">Patient Profile</a></li>
                             <li><a href="patient-invoice.html">Invoice</a></li>
                         </ul>
