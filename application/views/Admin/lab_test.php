@@ -50,19 +50,18 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            
-                                            <td><span class="list-name">01</span></td>
-                                            <td>Kipindupindu</td>
+                                        <?php $rowId = 1 ?>
+                                        <?php foreach($labtests as $labtest):?>
+                                        <tr> 
+                                            <td><span class="list-name"><?php echo $rowId < 10 ? "0".$rowId++ : $rowId++  ?></span></td>
+                                            <td><?= $labtest->name ?></td>
                                             <td>15,000</td>
                                                 <td>
                                             <a href="#" class="delete-link">Delete</a>
                                             <a href="#" class="view-link"><i class="zmdi zmdi-eye"></i></a>
                                             </td>
-                                        
                                         </tr>
-                                        
-                                        </tr>
+                                        <?php endforeach ?>
                                     </tbody>
                                 </table>                            
                             </div>
@@ -79,6 +78,7 @@
 </section>
 <div class="modal fade" id="addevent" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
+        <?php echo form_open('labtest/set_labtest')?>
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="title" id="defaultModalLabel">Add Test</h4>
@@ -87,7 +87,7 @@
                 
                 <div class="form-group">
                     <div class="form-line">
-                        <input type="text" name="name" class="form-control" placeholder="Enter Test name">
+                        <input type="text" class="form-control" placeholder="Enter Test name" name="labtest">
                     </div>
                 </div>
                 <div class="form-group">
@@ -98,10 +98,11 @@
                       
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-round waves-effect">Add</button>
+                <button type="submit" class="btn btn-primary btn-round waves-effect">Add</button>
                 <button type="button" class="btn btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
             </div>
         </div>
+        <?php echo form_close() ?>
     </div>
 
 <?php include APPPATH . "views/includes/footer.php"?>

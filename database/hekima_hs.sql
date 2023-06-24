@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `departiment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `departiment` (
-  `epartiment_id` int NOT NULL,
+  `epartiment_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`epartiment_id`)
@@ -77,7 +77,7 @@ DROP TABLE IF EXISTS `duration`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `duration` (
-  `duration_id` int NOT NULL,
+  `duration_id` int NOT NULL AUTO_INCREMENT,
   `description` int DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`duration_id`)
@@ -101,7 +101,7 @@ DROP TABLE IF EXISTS `frequency`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `frequency` (
-  `frequency_id` int NOT NULL,
+  `frequency_id` int NOT NULL AUTO_INCREMENT,
   `description` int DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`frequency_id`)
@@ -125,7 +125,7 @@ DROP TABLE IF EXISTS `general_examination`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `general_examination` (
-  `general_examination_id` int NOT NULL,
+  `general_examination_id` int NOT NULL AUTO_INCREMENT,
   `description` text,
   `staff_id` int DEFAULT NULL,
   `patient_id` int DEFAULT NULL,
@@ -155,7 +155,7 @@ DROP TABLE IF EXISTS `gynacological_history`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `gynacological_history` (
-  `gynacological_history_id` int NOT NULL,
+  `gynacological_history_id` int NOT NULL AUTO_INCREMENT,
   `decription` text,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `staff_id` int DEFAULT NULL,
@@ -185,7 +185,7 @@ DROP TABLE IF EXISTS `investigation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `investigation` (
-  `investigation_id` int NOT NULL,
+  `investigation_id` int NOT NULL AUTO_INCREMENT,
   `category` varchar(45) DEFAULT NULL,
   `subcategory` varchar(45) DEFAULT NULL,
   `staff_id` int DEFAULT NULL,
@@ -217,7 +217,7 @@ DROP TABLE IF EXISTS `main_complaint`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `main_complaint` (
-  `main_complaint_id` int NOT NULL,
+  `main_complaint_id` int NOT NULL AUTO_INCREMENT,
   `description` text,
   `staff_id` int DEFAULT NULL,
   `patient_id` int DEFAULT NULL,
@@ -247,7 +247,7 @@ DROP TABLE IF EXISTS `medicine`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `medicine` (
-  `medicine_id` int NOT NULL,
+  `medicine_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `quantity` int DEFAULT NULL,
   `route` varchar(45) DEFAULT NULL,
@@ -281,7 +281,7 @@ DROP TABLE IF EXISTS `past_medical`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `past_medical` (
-  `past_medical_id` int NOT NULL,
+  `past_medical_id` int NOT NULL AUTO_INCREMENT,
   `description` text,
   `staff_id` int DEFAULT NULL,
   `patient_id` int DEFAULT NULL,
@@ -311,7 +311,7 @@ DROP TABLE IF EXISTS `patient`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `patient` (
-  `patient_id` int NOT NULL,
+  `patient_id` int NOT NULL AUTO_INCREMENT,
   `first_name` varchar(45) DEFAULT NULL,
   `middle_name` varchar(45) DEFAULT NULL,
   `last_name` varchar(45) DEFAULT NULL,
@@ -339,7 +339,7 @@ DROP TABLE IF EXISTS `patient_history`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `patient_history` (
-  `patient_history_id` int NOT NULL,
+  `patient_history_id` int NOT NULL AUTO_INCREMENT,
   `description` text,
   `staff_id` int DEFAULT NULL,
   `patient_id` int DEFAULT NULL,
@@ -369,7 +369,7 @@ DROP TABLE IF EXISTS `position`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `position` (
-  `positio_id` int NOT NULL,
+  `positio_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`positio_id`)
@@ -393,7 +393,7 @@ DROP TABLE IF EXISTS `procedure`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `procedure` (
-  `procedure_id` int NOT NULL,
+  `procedure_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `price` int DEFAULT NULL,
   `staff_id` int DEFAULT NULL,
@@ -420,7 +420,7 @@ DROP TABLE IF EXISTS `review_other_system`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_other_system` (
-  `review_other_system_id` int NOT NULL,
+  `review_other_system_id` int NOT NULL AUTO_INCREMENT,
   `description` text,
   `staff_id` int DEFAULT NULL,
   `patient_id` int DEFAULT NULL,
@@ -450,7 +450,7 @@ DROP TABLE IF EXISTS `route`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `route` (
-  `route_id` int NOT NULL,
+  `route_id` int NOT NULL AUTO_INCREMENT,
   `description` varchar(45) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`route_id`)
@@ -474,7 +474,7 @@ DROP TABLE IF EXISTS `setting`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `setting` (
-  `setting_id` int NOT NULL,
+  `setting_id` int NOT NULL AUTO_INCREMENT,
   `center_name` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   `location` varchar(255) DEFAULT NULL,
@@ -502,7 +502,7 @@ DROP TABLE IF EXISTS `staff`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `staff` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `full_name` varchar(45) DEFAULT NULL,
   `username` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
@@ -538,7 +538,7 @@ DROP TABLE IF EXISTS `surgical`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `surgical` (
-  `surgical_id` int NOT NULL,
+  `surgical_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `price` int DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -566,7 +566,7 @@ DROP TABLE IF EXISTS `test_category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `test_category` (
-  `test_category_id` int NOT NULL,
+  `test_category_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `test_subcategory_id` int DEFAULT NULL,
@@ -593,7 +593,7 @@ DROP TABLE IF EXISTS `test_subcategory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `test_subcategory` (
-  `test_subcategory_id` int NOT NULL,
+  `test_subcategory_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `price` int DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -624,7 +624,7 @@ DROP TABLE IF EXISTS `transfer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `transfer` (
-  `transfer_id` int NOT NULL,
+  `transfer_id` int NOT NULL AUTO_INCREMENT,
   `from` varchar(45) DEFAULT NULL,
   `to` varchar(45) DEFAULT NULL,
   `staff_id` int DEFAULT NULL,
@@ -655,7 +655,7 @@ DROP TABLE IF EXISTS `vitual_sign`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `vitual_sign` (
-  `vitual_sign_id` int NOT NULL,
+  `vitual_sign_id` int NOT NULL AUTO_INCREMENT,
   `body_temperature` varchar(45) DEFAULT NULL,
   `blood_pressure` varchar(45) DEFAULT NULL,
   `pulse_rate` varchar(45) DEFAULT NULL,

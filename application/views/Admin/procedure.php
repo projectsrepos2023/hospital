@@ -50,21 +50,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php $rowId = 1 ?>
+                                    <?php foreach($procedures as $procedure): ?>
                                         <tr>
-                                            
-                                            <td><span class="list-name">01</span></td>
-                                            <td>Kufunga bandeji</td>
-                                            <td>500</td>
+                                            <td><span class="list-name"><?php echo $rowId < 10 ? "0".$rowId++ : $rowId++ ?></span></td>
+                                            <td><?= $procedure->name ?></td>
+                                            <td><?= $procedure->price ?></td>
                                             <td>
-                                            <a href="#" class="delete-link">Delete</a>
+                                            <a href="<?php echo site_url('procedure/'.$procedure->procedure_id) ?>" class="delete-link">Delete</a>
                                             <a href="#" class="view-link"><i class="zmdi zmdi-eye"></i></a>
-
                                             </td>
-                                            
-                                           
-                                        
-                                        </tr>
-                                        
+                                        <?php endforeach ?>
                                         </tr>
                                     </tbody>
                                 </table>                            
@@ -82,28 +78,33 @@
 </section>
 <div class="modal fade" id="addevent" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
+
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="title" id="defaultModalLabel">Add Procedures</h4>
             </div>
-            <div class="modal-body">
-                
+            <?php echo form_open('Procedure/set_procedure') ?>
+            <div class="modal-body"> 
                 <div class="form-group">
                     <div class="form-line">
-                        <input type="text" class="form-control" placeholder="Enter Procedure name">
+                        <input type="text" class="form-control" placeholder="Enter Procedure name" name="procedure">
+                        <p class="text-danger"><?= form_error('procedure') ?></p>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-line">
-                        <input type="number" class="form-control" placeholder="Enter Procedure Amount">
+                        <input type="number" class="form-control" placeholder="Enter Procedure Amount" name="price">
+                        <p class="text-danger"><?= form_error('price') ?></p>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-round waves-effect">Add</button>
+                <button type="submit" class="btn btn-primary btn-round waves-effect">Add</button>
                 <button type="button" class="btn btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
             </div>
         </div>
+    <?php echo form_close() ?>
     </div>
+  </div>
 
 <?php include APPPATH . "views/includes/footer.php"?>

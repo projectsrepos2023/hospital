@@ -29,8 +29,8 @@
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-settings"></i><span>Billing Settings</span> </a>
                         <ul class="ml-menu"> 
                         
-                            <li><a href="<?php echo base_url('lab_test') ?>">Register Lab Tests</a></li>
-                            <li><a href="<?php echo base_url('procedures') ?>">Register Procedure Price</a></li>                       
+                            <li><a href="<?php echo base_url('labtest') ?>">Register Lab Tests</a></li>
+                            <li><a href="<?php echo base_url('procedure') ?>">Register Procedure Price</a></li>                       
                             <li><a href=" <?php echo base_url('surgical') ?>">Register Surgical Price</a></li>                       
                                                 
                             
