@@ -7,11 +7,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-<title>:: Oreo Hospital :: Home</title>
+<title>:: Hekima Despensary ::</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
 <link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/bootstrap/css/bootstrap.min.css') ?>">
 <link rel="stylesheet" href="<?php echo base_url('public/assetsassets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') ?>"/>
 <link rel="stylesheet" href="<?php echo base_url('public/assetsassets/plugins/morrisjs/morris.min.css') ?>" />
+<link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/bootstrap/css/bootstrap.min.css') ?>">
+<link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/dropzone/dropzone.css') ?>">
+<link href="<?php echo base_url('public/assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css') ?>" rel="stylesheet" />
+<link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/bootstrap-select/css/bootstrap-select.css') ?>"/>
+<!-- Custom Css -->
 <!-- Custom Css -->
 <link rel="stylesheet" href="<?php echo base_url('public/css/main.css') ?>">
 <link rel="stylesheet" href="<?php echo base_url('public/css/color_skins.css') ?>">
@@ -32,7 +37,7 @@
         <li>
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html"><img src="https://thememakker.com/templates/oreo/hospital/html/assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10">Oreo</span></a>
+                <a class="navbar-brand" href="index.html"><span class="m-l-10">Hekima Despensary</span></a>
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>

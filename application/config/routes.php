@@ -30,6 +30,16 @@ $route['procedure/(:any)'] = 'procedure/delete_procedure/$1';
 $route['surgical'] = 'surgical/index';
 $route['surgical/(:any)'] = "surgical/delete_surgicals/$1";
 
+//staff
+$route['departments'] = 'Admin/departments';
+$route['staff'] = 'Admin/staff';
+$route['staff_profile'] = 'Admin/staff_profile';
+$route['add_staff'] = 'Admin/Add_staff';
+$route['add_patient'] = 'Reception/add_patient';
+$route['all_patient'] = 'Admin/all_patients';
+
 $route['404_override'] = 'auth/page_not_found';
 $route['translate_uri_dashes'] = FALSE;
+
+
 
