@@ -24,103 +24,126 @@
                 <div class="card">
                     <div class="header">
                         <h2><strong>Basic</strong> Information <small>Description text here...</small> </h2>
-                        
+                    
+                    <?php if($this->session->flashdata('danger')):?>
+                        <div class="mt-4 alert alert-danger alert-dismissible fade show" role="alert">
+                        <?= $this->session->flashdata('danger') ?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+
+                    <?php else:?>
+                        <div class="mt-4 alert alert-success alert-dismissible fade show" role="alert">
+                        <?= $this->session->flashdata('status') ?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                    <?php endif?>
+                
                     </div>
                     <div class="body">
     <div class="row clearfix">
         <div class="col-sm-4">
             <div class="form-group">
-                <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" class="form-control" placeholder="First Name">
+           
+            <?php echo form_open_multipart('Staff/add_staff') ?>
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name"  value="<?php echo set_value('first_name') ?>" class="form-control" placeholder="Enter First Name">
+                 <small class="error"><?php echo form_error('first_name'); ?></small>
             </div>
         </div>
         <div class="col-sm-4">
             <div class="form-group">
                 <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" class="form-control" placeholder="Last Name">
+                <input type="text" name="last_name" value="<?php echo set_value('last_name') ?>" class="form-control" placeholder="enter Last Name">
+                <small class="error"><?php echo form_error('last_name'); ?></small>
             </div>
         </div>
         <div class="col-sm-4">
             <div class="form-group">
-                <label for="phone">Username</label>
-                <input type="text" name="username" id="phone" class="form-control" placeholder="Username">
+                <label for="last-name">Username:</label>
+                <input type="text" name="username" name="<?php echo set_value('username') ?>" class="form-control" placeholder="enter Username">
+                <small class="error"><?php echo form_error('username'); ?></small>
             </div>
         </div>
-    </div>
-    <div class="row clearfix">                            
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" name="email"  class="form-control" placeholder="email">
+                <label for="last-name">email:</label>
+                <input type="text" name="email" value="<?php set_value('email') ?>" class="form-control" placeholder="enter email">
+                <small class="error"><?php echo form_error('email'); ?></small>
             </div>
         </div>
-        <div class="col-sm-3">
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender" class="form-control show-tick">
-                <option value="">- Gender -</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone_number" value="<?php echo set_value('phone_number') ?>" id="phone" class="form-control" placeholder="Phone Number">
+                <small class="error"><?php echo form_error('phone_number'); ?></small>
+            </div>
+        </div>
+        
+        <!-- <div class="col-sm-4">
+        <label for="Title">Title:</label>
+            <select name="title" id="title" >
+                <option value="">-select title-</option>
+                <option value="Male">Mr</option>
+                <option value="Female">Mrs</option>
+                <option value="Female">Miss</option>
             </select>
-        </div>                           
-        <div class="col-sm-3">
-            <label for="gender">Title:</label>
-            <select id="gender" name="title" class="form-control show-tick">
-                <option value="">- Title -</option>
-                <option value="Mr">Mr</option>
-                <option value="Mrs">Mrs</option>
-                <option value="Miss">Miss</option>
-            </select>
-        </div>                           
-        <div class="col-sm-3">
-        <div class="form-group">
+            <small class="error"><?php echo form_error('title'); ?></small>
+        </div>  -->
+        <div class="col-sm-4">
         <label for="fileUpload">Profile picture</label>
         <input type="file" class="form-control-file" id="fileUpload" accept="image/png, image/jpeg">
-    </div>
         </div>
-        <div class="col-sm-3">
-        <div class="form-group">
+        <div class="col-sm-4">
         <label for="fileUpload">Education Attachments</label>
         <input type="file" class="form-control-file" id="fileUpload" accept=".pdf, .doc, .docx">
+        </div>
+
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="phone">Password</label>
+                <input type="password" name="password" value="" class="form-control" placeholder="Enter Password">
+                <small class="error"><?php echo form_error('password'); ?></small>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="phone">Confirm Password</label>
+                <input type="password" name="conf"  class="form-control" placeholder="Confirm Password">
+                <small class="error"><?php echo form_error('conf'); ?></small>
+            </div>
+        </div>
+        
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="Department">Department:</label>
+
+                <?php foreach($departiments as $departiment): ?>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="department"  value="<?= $departiment->name ?>" >
+                    <label class="form-check-label" for="<?= $departiment->name ?>"><?= $departiment->name ?></label>
+                </div>
+                <?php endforeach ?>
+                <small class="error"><?php echo form_error('department'); ?></small>
+            </div>
+        </div>
+        
     </div>
-        </div>
-        <div class="col-sm-3">
-            <label for="gender">Department:</label>
-            <select id="gender" name="title" class="form-control show-tick">
-                <option value="">-select Department-</option>
-                <option value="doctors">Doctors</option>
-                <option value="Mrs">Mrs</option>
-                <option value="Miss">Miss</option>
-            </select>
-        </div>  
-        <div class="col-sm-3">
-            <div class="form-group">
-                <label for="email">Password</label>
-                <input type="number" id="email" class="form-control" placeholder="Enter Your Email">
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <label for="email">Confirm Password</label>
-                <input type="number" id="email" class="form-control" placeholder="Enter Your Email">
-            </div>
-        </div>
     
-    </div>
     <div class="row">
         <div class="col-sm-12 text-center" style="padding-top: 20px;">
             <button type="submit" class="btn btn-primary btn-round">Submit</button>
         </div>
-    
+     <?php echo form_close() ?>
 </div>
-
+ 
                 </div>
             </div>
         </div>
-        <div class="row clearfix">
-            <div class="col-md-12">
-                
-            </div>
-        </div>
+        
     </div>
     </div>
     <div class="container-fluid">
@@ -148,7 +171,7 @@
                                     <thead>
                                         <tr>                                       
                                             
-                                            
+                                            <th>S/NO</th>
                                             <th>First Name</th>
                                             <th>Last Name</th>
                                             <th>Username</th>
@@ -160,18 +183,21 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $rowId = 1 ?>
+                                        <?php foreach($staffs as $staff):?>
                                         <tr>
-                                            
-                                            
-                                            <td>Daniel</td>
-                                            <td>Daniel</td>
-                                            <td>Dan</td>
-                                            <td>James@gmail.com</td>
-                                            <td>male</td>
-                                            <td>Receptionist</td>
-                                            <td>0712345678</td>
+                                            <td><?= $rowId < 10 ? "0".$rowId++ : $rowId++ ?></td>
+                                            <td><?= $staff->first_name ?></td>
+                                            <td><?= $staff->last_name ?></td>
+                                            <td><?= $staff->username ?></td>
+                                            <td><?= $staff->email ?></td>
+                                            <td>M</td>
+                                            <td><?= $staff->department ?></td>
+                                            <td><?= $staff->phone_number ?></td>
                                             <td><span class="badge badge-success">Active</span></td>
                                         </tr>
+                                        <?php endforeach ?>
+                                    
                                         </tbody>
                                        </table>           
                             </div>
@@ -205,7 +231,7 @@
       <input type="checkbox" id="javascript">
       <label for="javascript">Setup Settings</label>
     </div>
-  </form>
+  <!-- </form> -->
 </div>
                       
             </div>

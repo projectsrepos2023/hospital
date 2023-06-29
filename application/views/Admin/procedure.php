@@ -38,7 +38,7 @@
                         <!-- Tab panes -->
                         <div class="tab-content m-t-10">
                             <div class="tab-pane table-responsive active" id="All">
-                                <table class="table m-b-0 table-hover">
+                                <table id="item-list" class="table m-b-0 table-hover">
                                     <thead>
                                         <tr>                                       
                                             
