@@ -31,12 +31,18 @@ $route['surgical'] = 'surgical/index';
 $route['surgical/(:any)'] = "surgical/delete_surgicals/$1";
 
 //staff
-$route['departments'] = 'Admin/departments';
-$route['staff'] = 'Admin/staff';
-$route['staff_profile'] = 'Admin/staff_profile';
-$route['add_staff'] = 'Admin/Add_staff';
-$route['add_patient'] = 'Reception/add_patient';
-$route['all_patient'] = 'Admin/all_patients';
+$route['staff'] = 'staff/all_staff';
+$route['create'] = 'staff/index';
+$route['staff-profile/(:any)'] = 'staff/staff_profile/$1';
+
+//patients
+$route['patient'] = 'patient/all_patients';
+$route['register-patient'] = 'patient/index';
+$route['patient_profile'] = 'patient/patient_profile';
+$route['prescription'] = 'Gynacological/gynacological';
+ 
+// transfer
+$route['patient_transfer/(:any)'] = 'Transfer/transfer_patient/$1';
 
 $route['404_override'] = 'auth/page_not_found';
 $route['translate_uri_dashes'] = FALSE;

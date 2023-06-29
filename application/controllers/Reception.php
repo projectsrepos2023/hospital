@@ -8,5 +8,6 @@ class Reception extends CI_Controller
         $this->load->view('Reception/add_patient');
         
     } 
+    
 
 }

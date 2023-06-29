@@ -12,12 +12,12 @@ class Auth extends CI_Controller
 
     public function dashboard() {
         //only staff member can access the dashbord route otherwise redirect to login
-        $staffId = $this->session->userdata('staffId');
-        if(!isset($staffId)) {
-            return redirect('login');
-        } else {
+        // $staffId = $this->session->userdata('staffId');
+        // if(!isset($staffId)) {
+        //     return redirect('login');
+        // } else {
             $this->load->view('index');
-        }
+       // }
     }
     public function login() {
         //validate form inputs

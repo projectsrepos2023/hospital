@@ -8,7 +8,9 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 <title>:: Hekima Despensary ::</title>
+
 <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/bootstrap/css/bootstrap.min.css') ?>">
 <link rel="stylesheet" href="<?php echo base_url('public/assetsassets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') ?>"/>
 <link rel="stylesheet" href="<?php echo base_url('public/assetsassets/plugins/morrisjs/morris.min.css') ?>" />
@@ -21,6 +23,45 @@
 <link rel="stylesheet" href="<?php echo base_url('public/css/main.css') ?>">
 <link rel="stylesheet" href="<?php echo base_url('public/css/color_skins.css') ?>">
 </head>
+<style>
+    .error {
+        color:red;
+        font-weight: 400;
+    }
+
+    .cbody {
+    font-family: Arial, sans-serif;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056B3;
+}
+
+#searchResults {
+    padding: 1rem;
+}
+
+</style>
 <body class="theme-cyan">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
@@ -203,14 +244,7 @@
                 <li class="footer"><a href="javascript:void(0);">View All</a></li>
             </ul>
         </li>
-        <li class="d-none d-md-inline-block">
-            <div class="input-group">                
-                <input type="text" class="form-control" placeholder="Search...">
-                <span class="input-group-addon">
-                    <i class="zmdi zmdi-search"></i>
-                </span>
-            </div>
-        </li>        
+              
         <li class="float-right">
             <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
             <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>

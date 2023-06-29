@@ -55,22 +55,27 @@
                     <div class="tab-pane" id="Consultant">
                         <div class="row clearfix">
                     
+                            <?php foreach($staff_members as $staff_member): ?>
                             <div class="col-lg-3 col-md-4 col-sm-6">
+
                                 <div class="card xl-blue member-card doctor">
                                     <div class="body">
                                         <div class="member-thumb">
-                                            <img src="<?php echo base_url('public/assets/images/doctors/member8.png') ?>" class="img-fluid" alt="profile-image">                               
+                                            <img src="<?php echo $staff_member->image_url != null ? $staff_member->image_url : base_url('public/assets/images/doctors/staff-avator.jpg') ?>" class="img-fluid" alt="profile-image">                               
                                         </div>
+
                                         <div class="detail">
-                                            <h4 class="m-b-0">Dr. Jonson</h4>
-                                            <h6 class="text-muted">Doctor</h6>
-                                            <p class="text-muted">0747587980</p>
-                                            <p class="text-muted">jonson@gmail.com</p>                           
-                                            <a href="<?php echo base_url('staff_profile') ?>"  class="btn btn-default btn-round btn-simple">View Profile</a>
+                                            <h4 class="m-b-0"><?= $staff_member->first_name ?></h4>
+                                            <h6 class="text-muted"><?= $staff_member->department ?></h6>
+                                            <p class="text-muted"><?= $staff_member->phone_number  ?></p>
+                                            <p class="text-muted"><?= $staff_member->email ?></p>                           
+                                            <a href="<?php echo base_url('staff-profile/' . $staff_member->id) ?>"  class="btn btn-default btn-round btn-simple">View Profile</a>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
+                            <?php endforeach ?>
                         </div> 
                         </div> 
                     </div>

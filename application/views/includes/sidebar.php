@@ -39,7 +39,7 @@
                     <!-- <li><a href="book-appointment.html"><i class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a></li> -->
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-add"></i><span>Staff</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="add_staff">Register staff</a></li>  
+                            <li><a href="<?php echo site_url('create') ?>">Register staff</a></li>  
                             <li><a href="<?php echo base_url('staff') ?>">All Staff</a></li>
                                                  
                           
@@ -49,10 +49,11 @@
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                         <ul class="ml-menu">
                             <li><a href="<?php echo base_url('all_patient') ?>">All Patients</a></li>
-                            <li><a href="<?php echo base_url('add_patient') ?>">Add Patient</a></li>                       
-                            <li><a href="patient-profile.html">Patient Profile</a></li>
+                            <li><a href="<?php echo base_url('register-patient') ?>">Add Patient</a></li>                       
+                            <li><a href="<?php echo base_url('patient_profile') ?>">Patient Profile</a></li>
                             <li><a href="patient-invoice.html">Invoice</a></li>
                         </ul>
+                        <li class=""><a href="<?php echo base_url('prescription') ?>"><i class="zmdi zmdi-book"></i><span>Prescription</span></a></li>   
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-balance-wallet"></i><span>Payments</span> </a>
                         <ul class="ml-menu">

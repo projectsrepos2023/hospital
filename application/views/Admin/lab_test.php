@@ -78,7 +78,7 @@
 </section>
 <div class="modal fade" id="addevent" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
-        <?php echo form_open('labtest/set_labtest')?>
+        <?php echo form_open('Labtest/set_labtest')?>
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="title" id="defaultModalLabel">Add Test</h4>
