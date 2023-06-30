@@ -116,7 +116,7 @@
                                             <button class="btn btn-primary btn-round">Transfer</button>
                                         </div>
   
-                                   </form> 
+                                   <?php form_close()?>
                                    
                                   </div>
                                   <?php if ($this->session->flashdata('transferSuccess')) : ?>

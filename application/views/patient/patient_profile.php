@@ -28,14 +28,12 @@
                     <div class="header">
                         
                     <div class="center">
-                  
 
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search...">
-        <button onclick="search()">Search</button>
-    </div>
-    <div id="searchResults"></div>
-   
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <button onclick="search()">Search</button>
+                    </div>
+                    <div id="searchResults"></div>
 
                     </div>
                     <div class="body">
@@ -70,4 +68,4 @@
 </section>
 <script src="script.js"></script>
 
-        <?php include APPPATH . "views/includes/footer.php"?>
+<?php include APPPATH . "views/includes/footer.php"?>
