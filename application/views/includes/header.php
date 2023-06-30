@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/bootstrap/css/bootstrap.min.css') ?>">
-<link rel="stylesheet" href="<?php echo base_url('public/assetsassets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') ?>"/>
+<link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') ?>"/>
 <link rel="stylesheet" href="<?php echo base_url('public/assetsassets/plugins/morrisjs/morris.min.css') ?>" />
 <link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/bootstrap/css/bootstrap.min.css') ?>">
 <link rel="stylesheet" href="<?php echo base_url('public/assets/plugins/dropzone/dropzone.css') ?>">
@@ -22,44 +22,39 @@
 <!-- Custom Css -->
 <link rel="stylesheet" href="<?php echo base_url('public/css/main.css') ?>">
 <link rel="stylesheet" href="<?php echo base_url('public/css/color_skins.css') ?>">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+            $(document).ready(function(){
+
+                // Show the first tab by default
+                $('.patient-tab-content:first').show();
+                $('.patient-nav li:first a').addClass('active');
+
+                // Handle click events on the navigation tabs
+                $('.patient-nav li a').click(function() {
+                    // Remove the 'active' class from all navigation tabs
+                    $('.patient-nav li a').removeClass('active');
+                    // Add the 'active' class to the clicked tab
+                    $(this).addClass('active');
+
+                    // Hide all tab content
+                    $('.patient-tab-content').hide();
+                    // Show the corresponding tab content based on the href attribute
+                    var activeTab = $(this).attr('href');
+                    $(activeTab).show();
+
+                    // Prevent the default link behavior
+                    return false;
+                });
+            });
+        </script>
+
 </head>
 <style>
     .error {
         color:red;
         font-weight: 400;
     }
-
-    .cbody {
-    font-family: Arial, sans-serif;
-}
-
-.search-container {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-}
-
-input[type="text"] {
-    padding: 0.5rem;
-    font-size: 1rem;
-}
-
-button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056B3;
-}
-
-#searchResults {
-    padding: 1rem;
-}
 
 </style>
 <body class="theme-cyan">

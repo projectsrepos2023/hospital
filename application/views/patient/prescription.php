@@ -1,322 +1,364 @@
 <?php include APPPATH . "views/includes/header.php"?>
 <?php include APPPATH . "views/includes/sidebar.php"?>
 
+<style>
+    body {
+        background-color: #eee !important;
+    }
 
-<section class="content profile-page">
-    <div class="block-header">
-        <div class="row">
-            <div class="col-lg-7 col-md-5 col-sm-12">
-                <h2>Profile
-                <small>Welcome to Afyasoft</small>
-                </h2>
-            </div>
-            <div class="col-lg-5 col-md-7 col-sm-12">                
-                <button class="btn btn-white btn-icon btn-round d-none d-md-inline-block float-right m-l-10" type="button">
-                    <i class="zmdi zmdi-edit"></i>
-                </button>
-                <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i>Hekima</a></li>
-                    <li class="breadcrumb-item active">Doctor Profile</li>
-                </ul>                
-            </div>
-        </div>
-    </div>    
-    <div class="container-fluid">
-        <div class="row clearfix">
-            <div class="col-lg-4 col-md-12">
-                <div class="card profile-header">
-                    <div class="body text-center">
-                        <div class="profile-image"> <img src="<?php echo base_url('public/assets/images/sm/avatar2.png"') ?>" alt=""> </div>
-                        <div>
-                            <h4 class="m-b-0"><strong>Dr. Charlotte</strong> Deo</h4>
-                            <span class="job_post">Neurologist</span>
-                            <p>795 Folsom Ave, Suite 600<br> San Francisco, CADGE 94107</p>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary btn-round">Follow</button>
-                            <button class="btn btn-primary btn-round btn-simple">Message</button>
-                        </div>
-                        <p class="social-icon m-t-5 m-b-0">
-                            <a title="Twitter" href="javascript:void(0);"><i class="zmdi zmdi-twitter"></i></a>
-                            <a title="Facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a>
-                            <a title="Google-plus" href="javascript:void(0);"><i class="zmdi zmdi-twitter"></i></a>
-                            <a title="Behance" href="javascript:void(0);"><i class="zmdi zmdi-behance"></i></a>
-                            <a title="Instagram" href="javascript:void(0);"><i class="zmdi zmdi-instagram "></i></a>
-                        </p>
-                    </div>                    
-                </div>                               
-                <div class="card">
-                    <div class="body">
-                        <div class="workingtime">
-                            <h6>Working Time</h6>
-                            <small class="text-muted">Tuesday</small>
-                            <p>06:00 AM - 07:00 AM</p>
-                            <hr>
-                            <small class="text-muted">Thursday</small>
-                            <p>06:00 AM - 07:00 AM</p>
-                            <hr>
-                        </div>
-                        <div class="reviews">
-                            <h6>Reviews</h6>
-                            <small class="text-muted">Staff</small>
-                            <p>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star-outline"></i>
-                                <i class="zmdi zmdi-star-outline"></i>
-                            </p>
-                            <hr>
-                            <small class="text-muted">Punctuality</small>
-                            <p>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star-outline"></i>
-                            </p>
-                            <hr>
-                            <small class="text-muted">Helpfulness</small>
-                            <p>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                            </p>
-                            <hr>
-                            <small class="text-muted">Knowledge</small>
-                            <p>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star-outline"></i>
-                                <i class="zmdi zmdi-star-outline"></i>
-                            </p>
-                            <hr>
-                            <small class="text-muted">Cost</small>
-                            <p>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star-outline"></i>
-                                <i class="zmdi zmdi-star-outline"></i>
-                                <i class="zmdi zmdi-star-outline"></i>
-                            </p>
-                            <hr>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Followers">Followers</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#friends">Friends</a></li>                        
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane body active" id="Followers">
-                            <ul class="right_chat list-unstyled">
-                                <li class="online">
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <img class="media-object " src="../assets/images/xs/avatar4.jpg" alt="">
-                                            <div class="media-body">
-                                                <span class="name">Chris Fox</span>
-                                                <span class="message">Designer, Blogger</span>
-                                                <span class="badge badge-outline status"></span>
-                                            </div>
-                                        </div>
-                                    </a>                            
-                                </li>
-                                <li class="online">
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <img class="media-object " src="../assets/images/xs/avatar5.jpg" alt="">
-                                            <div class="media-body">
-                                                <span class="name">Joge Lucky</span>
-                                                <span class="message">Java Developer</span>
-                                                <span class="badge badge-outline status"></span>
-                                            </div>
-                                        </div>
-                                    </a>                            
-                                </li>
-                                <li class="offline">
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <img class="media-object " src="../assets/images/xs/avatar2.jpg" alt="">
-                                            <div class="media-body">
-                                                <span class="name">Isabella</span>
-                                                <span class="message">CEO, Thememakker</span>
-                                                <span class="badge badge-outline status"></span>
-                                            </div>
-                                        </div>
-                                    </a>                            
-                                </li>
-                                <li class="offline">
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <img class="media-object " src="../assets/images/xs/avatar1.jpg" alt="">
-                                            <div class="media-body">
-                                                <span class="name">Folisise Chosielie</span>
-                                                <span class="message">Art director, Movie Cut</span>
-                                                <span class="badge badge-outline status"></span>
-                                            </div>
-                                        </div>
-                                    </a>                            
-                                </li>
-                                <li class="online">
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <img class="media-object " src="../assets/images/xs/avatar3.jpg" alt="">
-                                            <div class="media-body">
-                                                <span class="name">Alexander</span>
-                                                <span class="message">Writter, Mag Editor</span>
-                                                <span class="badge badge-outline status"></span>
-                                            </div>
-                                        </div>
-                                    </a>                            
-                                </li>                        
-                            </ul>
-                        </div>
-                                               
-                    </div>
-                </div>                 
-            </div>
-            <div class="col-lg-8 col-md-12">
-                <div class="card">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#about">Vital Sign</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Gynacological">Gynacological History</a></li>                        
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Complaint">Main Complaint</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#patient_history">Patient History</a></li>                        
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#about">Past Medical</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Account">Review Of Other System</a></li>                        
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#about">General Examination</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Account">Systimatic Examination</a></li> 
+    section {
+        margin-left: 240px;padding-left: 8px; padding-top: 60px;
+        display: grid;grid-template-columns: 350px 1fr; align-items: start;
+    }
 
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Account">Investgation</a></li>                        
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#about">Diagnosis</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Account">Treatment</a></li>                        
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#about">Health Education</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Account">Appointment</a></li>                        
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Account">Transfer</a></li>                        
-                                             
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane body active" id="about">
-                        <div class="row clearfix">
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="first_name">Body Temperature(BT):</label>
-                <input type="text" name="Body_Temperature"   class="form-control">
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="Blood Pressure">Blood Pressure (BP)</label>
-                <input type="text" name="Blood_Pressure"  class="form-control">
-               
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="Purse Rate">Purse Rate(PR)</label>
-                <input type="text" name="Purse_Rate"  class="form-control">
-               
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="Respiratory Rate">Respiratory Rate(RR):</label>
-                <input type="text" name="email" value="<?php set_value('email') ?>" class="form-control" placeholder="enter email">
-                <small class="error"><?php echo form_error('email'); ?></small>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="phone">Oxygen Saturation(O)</label>
-                <input type="text" name="Oxygen_Saturation"  id="phone" class="form-control">
-                
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="phone">Weight</label>
-                <input type="password" name="Weight"  class="form-control">
-            </div>
-        </div>  
-    </div>
+
+    .head { grid-column: 1/ span 2; background-color: #01d8da; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center;}
+    .profile { text-align: center; display: grid; gap: 16px; justify-content: center; align-items: centercenter; margin: 18px; background-color: #fff; box-shadow: 3px 3px 5px #ccc; padding: 10px;}
+    .steps { margin: 20px 10px; }
+    .welcome > h6 { margin-block-end: 1px; color: white;}
+    .bread-thumb { background-color: #38f8fc;padding: 10px; border-radius: 50px;}
+    .wh { color: white; }
+    .profile-head { text-align: center; display: grid;  justify-content: center; }
+    .profile img { width: 150px; height: 150px; border-radius: 50%; border: 5px solid #ccc;}
     
-            </div> 
-          
-                        <div class="tab-pane body active" id="Gynacological">
-                        <div class="row clearfix">
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="first_name">Body Temperature(BT):</label>
-                <input type="text" name="Body_Temperature"   class="form-control">
-            </div>
+
+    /* tabs styles */
+    .patient-tabs .patient-nav {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 25px;
+            list-style-type: none;
+            
+            margin: 0;
+            padding: 0;
+            }
+
+            .patient-tabs .patient-nav li {
+            margin-right: 10px;
+            }
+
+            .patient-tabs .patient-nav li a {
+            padding: 10px;
+            background-color: #eee;
+            text-decoration: none;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            color: #333;
+            }
+
+            .patient-tabs .patient-nav li a.active {
+            background-color: greenyellow;
+            }
+
+            .patient-tabs .patient-tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            }
+
+            .patient-tabs .patient-tab-content h3 {
+            margin-top: 0;
+            }
+
+            /* vital sign form */
+            .vital-sign-form {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 18px;
+            }
+            .vital-sign-form label {
+                display: block;
+            }
+            input, textarea {
+                display: block;
+                border: 1px solid #ccc;
+                padding: 5px 1rem;
+                border-radius: 5px;
+                outline: none;
+                width: 100%;
+            }
+            input:focus, textarea:focus {
+                outline: 2px solid #ddd;
+            }
+            button {
+                display: block;
+                width: 150px;
+                background-color: #01d8da;
+                padding: 8px 20px;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                margin: 20px 0;
+            }
+            button:focus {
+                outline: 2px solid rgba(92, 91, 91, 0.4);
+                background-color: #38f8fc;
+            }
+</style>
+
+<section class="patient1" style="">
+    <div class="head">
+        <div class="welcome">
+            <h6>Welcome to Afyasoft</h6>
+            <p>Transfer patient to specific departiment</p>
         </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="Blood Pressure">Blood Pressure (BP)</label>
-                <input type="text" name="Blood_Pressure"  class="form-control">
-               
-            </div>
+        <div class="bread-thumb">
+            <span class="wh">Home</span> /
+            <span class="wh">prescription</span> /
+            <span>transfer patient</span>
         </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="Purse Rate">Purse Rate(PR)</label>
-                <input type="text" name="Purse_Rate"  class="form-control">
-               
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="Respiratory Rate">Respiratory Rate(RR):</label>
-                <input type="text" name="email" value="<?php set_value('email') ?>" class="form-control" placeholder="enter email">
-                <small class="error"><?php echo form_error('email'); ?></small>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="phone">Oxygen Saturation(O)</label>
-                <input type="text" name="Oxygen_Saturation"  id="phone" class="form-control">
-                
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="phone">Weight</label>
-                <input type="password" name="Weight"  class="form-control">
-            </div>
-        </div>  
     </div>
-    
-            </div> 
-                     <!-- end of Vital Sign -->
-                               
-                     
 
+    <div class="profile">
+        <img src="<?php echo base_url("public/assets/images/sm/avatar2.png") ?>" alt="">
+        <div>
+            <h6>Emannuel John Songa</h6>
+            <div>Description</div>
+        </div>
+    </div>
 
-                        <div class="tab-pane body" id="patient_history">
-                               
-                            <div class="form-group">
-                            <label for="my-textarea">Patient History:</label><br>
-                            <textarea id="my-textarea" name="my-textarea" rows="8" cols="60"></textarea><br>
-                        
-                            </div>
-                            <button class="btn btn-info btn-round">Save Changes</button>
-                            <hr>
-                            
-                        </div>  
-                          <!-- end of patient_history --> 
-                          
-                          
-                    </div>
+    <div class="steps">
+    <div class="patient-tabs">
+            <ul class="patient-nav">
+                <li><a href="#patient-home">Vital Sign</a></li>
+                <li><a href="#gynacological-history">Gynacological History</a></li>
+                <li><a href="#main-complaint">Main Complaint</a></li>
+                <li><a href="#patient-history">Patient History</a></li>
+                <li><a href="#past-medical">Past Medical</a></li>
+                <li><a href="#review-other-system">Review Other System</a></li>
+                <li><a href="#general-examination">General Examination</a></li>
+                <li><a href="#systimatic-examination">Systimatic Examination</a></li>
+                <li><a href="#investigation">Investigation</a></li>
+                <li><a href="#diagnosis">Diagnosis</a></li>
+                <li><a href="#treatment">Treatment</a></li>
+                <li><a href="#health-education">Health Education</a></li>
+                <li><a href="#appointment">Appointment</a></li>
+                <li><a href="#transfer">Transfer</a></li>
+
+            </ul>
+            
+            <div id="patient-home" class="patient-tab-content">
+                <h5>Vital Sign</h5>
+                <div class="vital-sign">
+                    <form class="vital-sign-form">
+                        <div>
+                            <label for="temp">Body Temperature(BT)</label>
+                            <input type="text" value="20deg c"  readonly id="body_temperature" required>
+                        </div>
+                        <div>
+                            <label for="blood_pressure">Blood Pressure(BP)</label>
+                            <input type="text" value="233"  readonly id="blood_pressure" required>
+                        </div>
+                        <div>
+                            <label for="respiratory_rate">Respiratory Rate</label>
+                            <input type="text" value="1866" readonly id="blood_pressure" required>
+                        </div>
+                        <div>
+                            <label for="oxygen_saturation">Oxygen Saturation(O)</label>
+                            <input type="text" value="8978v"  readonly id="oxygen_saturation" required>
+                        </div>
+                        <div>
+                            <label for="weight">Weight</label>
+                            <input type="text" value="2kg" readonly id="weight" required> 
+                        </div>
+                        <div>
+                            <label for="height">Height</label>
+                            <input type="text" value="200cm"  readonly id="height" required>
+                        </div>
+
+                    </form>
                 </div>
-                              
             </div>
-        </div>        
+
+            
+            <div id="gynacological-history" class="patient-tab-content">
+                <h5>Gynacological History</h5>
+                <div class="gynacological-history">
+                    <form class="gynacological-history-form">
+                        <div>
+                            <label for="gynacological-history">Description</label>
+                            <textarea id="gynacological-history" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="gynacological-history-btn">Save</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            
+            <div id="main-complaint" class="patient-tab-content">
+                <h5>Main Complaint</h5>
+                <div class="main-complaint">
+                    <form class="main-complaint-form">
+                        <div>
+                            <label for="main-complaint">Description</label>
+                            <textarea id="main-complaint" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="main-complaint-btn">Save</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div id="patient-history" class="patient-tab-content">
+                <h5>Patient History</h5>
+                <div class="patient-history">
+                    <form class="patient-history-form">
+                        <div>
+                            <label for="patient-history">Description</label>
+                            <textarea id="patient-history" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="patient-history-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+                <div id="past-medical" class="patient-tab-content">
+                <h5>Past Medical</h5>
+                <div class="past-medical">
+                    <form class="past-medical-form">
+                        <div>
+                            <label for="past-medical">Description</label>
+                            <textarea id="past-medical" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="past-medical-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+
+                <div id="review-other-system" class="patient-tab-content">
+                <h5>Review Other System</h5>
+                <div class="review-other-system">
+                    <form class="review-other-system-form">
+                        <div>
+                            <label for="review-other-system">Description</label>
+                            <textarea id="review-other-system" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="review-other-system-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+
+                <div id="general-examination" class="patient-tab-content">
+                <h5>General Examination</h5>
+                <div class="general-examination">
+                    <form class="general-examination-form">
+                        <div>
+                            <label for="general-examination">Description</label>
+                            <textarea id="general-examination" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="general-examination-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="systimatic-examination" class="patient-tab-content">
+                <h5>General Examination</h5>
+                <div class="systimatic-examination">
+                    <form class="systimatic-examination-form">
+                        <div>
+                            <label for="systimatic-examination">Description</label>
+                            <textarea id="systimatic-examination" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="systimatic-examination-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="investigation" class="patient-tab-content">
+                <h5>Investigation</h5>
+                <div class="investigation">
+                    <form class="investigation-form">
+                        <div>
+                            <label for="investigation">Description</label>
+                            <textarea id="investigation" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="investigation-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="diagnosis" class="patient-tab-content">
+                <h5>Diagnosis</h5>
+                <div class="diagnosis">
+                    <form class="diagnosis-form">
+                        <div>
+                            <label for="diagnosis">Description</label>
+                            <textarea id="diagnosis" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="diagnosis-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="treatment" class="patient-tab-content">
+                <h5>Treatment</h5>
+                <div class="treatment">
+                    <form class="treatment-form">
+                        <div>
+                            <label for="treatment">Description</label>
+                            <textarea id="treatment" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="treatment-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="health-education" class="patient-tab-content">
+                <h5>Health Education</h5>
+                <div class="health-education">
+                    <form class="health-education-form">
+                        <div>
+                            <label for="health-education">Description</label>
+                            <textarea id="health-education" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="health-education-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="appointment" class="patient-tab-content">
+                <h5>Appointment</h5>
+                <div class="appointment">
+                    <form class="appointment-form">
+                        <div>
+                            <label for="appointment">Description</label>
+                            <textarea id="appointment" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button id="appointment-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
+
+
+
 
 <?php include APPPATH . "views/includes/footer.php"?>
